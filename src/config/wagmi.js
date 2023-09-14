@@ -1,11 +1,10 @@
 import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { configureChains, createConfig } from 'wagmi'
-import { bsc, bscTestnet, polygon, polygonMumbai } from 'wagmi/chains'
-import { publicProvider } from 'wagmi/providers/public'
+import { polygon, polygonMumbai } from 'wagmi/chains'
 import { createPublicClient, http } from 'viem'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 
-const chains = [polygon, bsc, bscTestnet, polygonMumbai]
+const chains = [polygon, polygonMumbai]
 export const projectId = process.env.REACT_APP_WALLETCONNECT_PROJECTID
 
 export const { publicClient } = configureChains(chains, [alchemyProvider({
@@ -89,17 +88,6 @@ export const modalTheme = {
 export const publicDefaultClient = (chain = 80001) => {
   let defaultUrl = 'https://rpc.ankr.com/polygon_mumbai'
   let defaultChain = polygonMumbai;
-
-  if (chain === 56) {
-    defaultChain = bsc
-    defaultUrl = 'https://bsc-dataseed.binance.org/'
-  }
-
-  if (chain === 97) {
-    defaultChain = bscTestnet
-    defaultUrl = 'https://data-seed-prebsc-1-s1.binance.org:8545/'
-  }
-
 
   if (chain === 137) {
     defaultChain = polygon

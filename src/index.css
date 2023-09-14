@@ -2,20 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: Gilroy;
-  src: url('../public/fonts/Gilroy-Font/Gilroy-Medium.woff2');
+  src: url("../public/fonts/Gilroy-Font/Gilroy-Medium.woff2");
 }
 
 @font-face {
   font-family: GilroySemiBold;
-  src: url('../public/fonts/Gilroy-Font/Gilroy-Semibold.woff2');
+  src: url("../public/fonts/Gilroy-Font/Gilroy-Semibold.woff2");
 }
 
 @font-face {
   font-family: GilroyBold;
-  src: url('../public/fonts/Gilroy-Font/Gilroy-Bold.woff2');
+  src: url("../public/fonts/Gilroy-Font/Gilroy-Bold.woff2");
 }
 
 ::-webkit-scrollbar {
@@ -29,23 +28,22 @@
 
 body {
   margin: 0;
-  font-family: Gilroy, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F5F6F7;
+  background-color: #f5f6f7;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 input {
   background: transparent;
 }
-
 
 input:focus {
   outline: none;
@@ -76,14 +74,13 @@ input:focus {
 }
 
 .filled {
-  background: linear-gradient(270.01deg, #C89C34 8.72%, #FFBB1C 78.42%);
+  background: linear-gradient(270.01deg, #c89c34 8.72%, #ffbb1c 78.42%);
 }
 
 .transition-sidebar-close {
   max-height: 0px;
   transition: max-height 0.3s ease-in-out 0s;
 }
-
 
 .transition-sidebar-open {
   max-height: 144px;
@@ -95,7 +92,7 @@ input:focus {
 }
 
 .item-text-span {
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   display: inline-block;
   vertical-align: top;
   padding: 5px 10px;
@@ -114,7 +111,7 @@ input:focus {
 }
 
 .title-div {
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -123,13 +120,13 @@ input:focus {
 }
 
 .subtitle-span {
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 120%;
   letter-spacing: 0.04em;
-  color: #A69F9F;
+  color: #a69f9f;
   padding-right: 10px;
 }
 
@@ -138,7 +135,7 @@ input:focus {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #84DF3C;
+  background: #84df3c;
 }
 
 .status-pending {
@@ -146,7 +143,7 @@ input:focus {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #E56060;
+  background: #e56060;
 }
 
 .item-wrap {
@@ -165,7 +162,7 @@ input:focus {
 }
 
 .menu-title {
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 700;
   font-size: 13px;
@@ -177,7 +174,7 @@ input:focus {
 
 .menu-items-div {
   display: flex;
-  background: #F5F1EB;
+  background: #f5f1eb;
   cursor: pointer;
   box-shadow: 0px 0px 2px #dcdcdc;
   padding: 8px;
@@ -193,9 +190,8 @@ input:focus {
   display: inline-block;
 }
 
-
 .item-text {
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   display: inline-block;
   vertical-align: top;
   padding: 5px 10px;
@@ -203,9 +199,7 @@ input:focus {
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.02em;
-
 }
-
 
 @media (min-width: 481px) and (max-width: 767px) {
   .item-text {
@@ -217,4 +211,9 @@ input:focus {
   .item-text {
     display: none;
   }
+}
+
+.title-container {
+  height: auto;
+  min-height: 70px !important;
 }

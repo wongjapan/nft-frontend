@@ -1,4 +1,3 @@
-import { ALL_CAMPAIGN } from "data/mock/campaign";
 import React from "react";
 import { truncateText } from "utils/textTruncate";
 import ClaimButton from "./ClaimButton";
@@ -19,28 +18,25 @@ const CampaignCard = ({ id, name }) => {
   }
 
   return (
-    <div className="bg-white dark:bg-dark-1 rounded-[10px] overflow-hidden">
-      <div className="w-32 h-32">
+    <div className="flex flex-col gap-3 h-full bg-white dark:bg-dark-1 rounded-[10px] pb-5">
+      <div className="w-32 h-32 rounded-t-[10px]">
         <img
-          className="object-cover p-8 rounded-t-lg"
+          className="object-cover p-8 rounded-t-[10px]"
           src={data.image}
           alt={name}
         />
       </div>
-      <div className="px-5 pt-5 pb-5">
-        <div>
-          <h5 className="text-xl font-semibold tracking-tight text-primary-green dark:text-primary-green">
-            {truncateText(data.name)}
-          </h5>
-        </div>
-        <div className="flex items-center mt-2.5 mb-5">
-          <p className="text-gray-900 dark:text-white">
-            {truncateText(data.description, 100)}
-          </p>
-        </div>
-        <div className="flex items-center mt-2.5 mb-5">
-          {isConnected ? <ClaimButton campaignId={id} /> : <ConnectButton />}
-        </div>
+
+      <h5 className="px-5 text-xl font-semibold tracking-tight text-primary-green dark:text-primary-green">
+        {data.name}
+      </h5>
+
+      <p className="px-5 text-gray-900 dark:text-white">
+        {truncateText(data.description, 100)}
+      </p>
+
+      <div className="px-5 mt-auto">
+        {isConnected ? <ClaimButton campaignId={id} /> : <ConnectButton />}
       </div>
     </div>
   );

@@ -24,9 +24,11 @@ export default function HomePage() {
       <HomeLayout>
         <div className="grid grid-cols-1 gap-5 p-5 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
           {data.map((campaign) => (
-            <div key={campaign.id}>
-              <CampaignCard id={campaign.id} name={campaign.name} />
-            </div>
+            <CampaignCard
+              key={campaign.id}
+              id={campaign.id}
+              name={campaign.name}
+            />
           ))}
         </div>
       </HomeLayout>
