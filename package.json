@@ -38,6 +38,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "winbuild": "react-scripts build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json}\"",

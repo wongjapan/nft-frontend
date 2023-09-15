@@ -34,6 +34,8 @@ const ClaimButton = ({ campaignId }) => {
     }
   }, [isSuccess]);
 
+  console.log("canClaim", canClaim);
+
   return (
     <button
       disabled={!canClaim || isLoading}

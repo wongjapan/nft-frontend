@@ -2,14 +2,12 @@ import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
 import { configureChains, createConfig } from 'wagmi'
 import { polygon, polygonMumbai } from 'wagmi/chains'
 import { createPublicClient, http } from 'viem'
-import { alchemyProvider } from 'wagmi/providers/alchemy'
+// import { alchemyProvider } from 'wagmi/providers/alchemy'
 
 const chains = [polygon, polygonMumbai]
 export const projectId = process.env.REACT_APP_WALLETCONNECT_PROJECTID
 
-export const { publicClient } = configureChains(chains, [alchemyProvider({
-  apiKey: 'demo'
-}), w3mProvider({ projectId })])
+export const { publicClient } = configureChains(chains, [w3mProvider({ projectId })])
 export const wagmiConfig = createConfig({
   autoConnect: true,
   connectors: w3mConnectors({ projectId, chains }),
