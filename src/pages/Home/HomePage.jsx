@@ -3,7 +3,7 @@ import BaseLayout from "../../components/BaseLayout/BaseLayout";
 import HomeLayout from "../../components/HomeLayout";
 import { useDocumentTitle } from "../../hooks/setDocumentTitle";
 import { useNetwork, useQuery } from "wagmi";
-import { getAllCampaign } from "fetcher/allCampaign";
+import { getAllCampaign } from "../../fetcher/allCampaign";
 import CampaignCard from "./Campaign";
 
 export default function HomePage() {

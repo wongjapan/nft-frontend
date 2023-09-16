@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {
       fontFamily: {
         "gilroy": ["Gilroy", "GilroyBold"],
-        "gilroySemiBold": ["GilroySemiBold",],
+        "gilroySemiBold": ["GilroySemiBold"],
       },
       colors: {
         "light": "#F5F6F7",

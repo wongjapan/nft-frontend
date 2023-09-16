@@ -1,5 +1,5 @@
-import { IssuerAddress } from "config/constants/address"
-import { getIssuerAbi } from "utils/getAbi"
+import { IssuerAddress } from "../config/constants/address"
+import { getIssuerAbi } from "../utils/getAbi"
 import { useContractRead } from "wagmi"
 
 export const useCanClaim = (account, chainId, campaignId) => {

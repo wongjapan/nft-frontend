@@ -1,7 +1,6 @@
-import { publicDefaultClient } from 'config/wagmi';
+import { publicDefaultClient } from '../config/wagmi';
 import IssuerAbi from '../abi/OatIssuer.json'
-
-const { IssuerAddress } = require("config/constants/address")
+import { IssuerAddress } from '../config/constants/address';
 
 export const getAllCampaign = async (chain) => {
 

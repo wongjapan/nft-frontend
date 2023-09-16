@@ -5,11 +5,11 @@ import {
   useNetwork,
   usePrepareContractWrite,
 } from "wagmi";
-import { IssuerAddress } from "config/constants/address";
+import { IssuerAddress } from "../../config/constants/address";
 // import { useTheme } from "context/ThemeContext/ThemeProvider";
 import { toast } from "react-toastify";
-import { getIssuerAbi } from "utils/getAbi";
-import { useCanClaim } from "hooks/useCanClaim";
+import { getIssuerAbi } from "../../utils/getAbi";
+import { useCanClaim } from "../../hooks/useCanClaim";
 
 const ClaimButton = ({ campaignId }) => {
   const { address } = useAccount();

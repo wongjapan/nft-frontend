@@ -35,6 +35,8 @@ export default function BaseLayout({
     }
   }, [theme]);
 
+  console.log({ tempfixed })
+
   return (
     <div className="w-full dark:bg-dark">
       <div className="sticky top-0 z-10 w-full bg-white border-b border-gray-200 dark:bg-dark-2 dark:border-dark-3">

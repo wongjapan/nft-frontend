@@ -1,10 +1,10 @@
-import LaunchpadSVG from 'svgs/Sidebar/launchpad'
+import LaunchpadSVG from '../svgs/Sidebar/launchpad'
 import AirplaneSVG from '../svgs/Sidebar/airplane'
 import DashboardSVG from '../svgs/Sidebar/dashboard'
 import MoreProductsSVG from '../svgs/Sidebar/more_products'
 // import SheildSecuritySVG from 'svgs/Sidebar/shield_security'
-import StakingSVG from 'svgs/Sidebar/staking'
-import TradeSVG from 'svgs/Sidebar/trade'
+import StakingSVG from '../svgs/Sidebar/staking'
+import TradeSVG from '../svgs/Sidebar/trade'
 
 const PROTOCOL_BASE = 'https://protocol.arborswap.org'
 const HOME_BASE = 'https://www.arborswap.org'

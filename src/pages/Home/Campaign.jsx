@@ -1,9 +1,9 @@
 import React from "react";
-import { truncateText } from "utils/textTruncate";
+import { truncateText } from "../../utils/textTruncate";
 import ClaimButton from "./ClaimButton";
 import { useAccount, useQuery } from "wagmi";
 import ConnectButton from "./ConnectButton";
-import { fetch_metadata } from "fetcher/campaignDetail";
+import { fetch_metadata } from "../../fetcher/campaignDetail";
 
 const CampaignCard = ({ id, name }) => {
   const { isConnected } = useAccount();
@@ -18,10 +18,10 @@ const CampaignCard = ({ id, name }) => {
   }
 
   return (
-    <div className="flex flex-col gap-3 h-full bg-white dark:bg-dark-1 rounded-[10px] pb-5">
-      <div className="w-32 h-32 rounded-t-[10px]">
+    <div className="flex flex-col gap-3 bg-white dark:bg-dark-1 rounded-[10px] pb-5">
+      <div className="w-full rounded-t-[10px]">
         <img
-          className="object-cover p-8 rounded-t-[10px]"
+          className="object-cover rounded-t-[10px]"
           src={data.image}
           alt={name}
         />

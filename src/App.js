@@ -3,11 +3,11 @@ import { SidebarProvider } from './context/SidebarContext/GlobalProvider'
 import WebRouter from './route'
 import 'react-datetime/css/react-datetime.css'
 import { ModalProvider } from 'react-simple-modal-provider'
-import modals from 'components/Modal'
+import modals from './components/Modal'
 import { WagmiConfig } from 'wagmi'
-import { ethereumClient, modalTheme, projectId, wagmiConfig } from 'config/wagmi'
+import { ethereumClient, modalTheme, projectId, wagmiConfig } from './config/wagmi'
 import { Web3Modal } from '@web3modal/react'
-import { useTheme } from 'context/ThemeContext/ThemeProvider'
+import { useTheme } from './context/ThemeContext/ThemeProvider'
 
 
 function App() {
