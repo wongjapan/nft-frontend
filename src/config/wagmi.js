@@ -4,7 +4,32 @@ import { polygon, polygonMumbai } from 'wagmi/chains'
 import { createPublicClient, http } from 'viem'
 // import { alchemyProvider } from 'wagmi/providers/alchemy'
 
-const chains = [polygon, polygonMumbai]
+const rbaChain = {
+  id: 159,
+  name: 'Rbachain',
+  network: 'rbachain',
+  nativeCurrency: {
+    decimals: 18,
+    name: 'Roburna',
+    symbol: 'RBA',
+  },
+  rpcUrls: {
+    public: { http: ['https://preseed-testnet-1.roburna.com/'] },
+    default: { http: ['https://preseed-testnet-1.roburna.com/'] },
+  },
+  blockExplorers: {
+    etherscan: { name: 'RBASCAN', url: 'https://rbascan.com' },
+    default: { name: 'RBASCAN', url: 'https://rbascan.com' },
+  },
+  contracts: {
+    multicall3: {
+      address: '0x147cf52DEd2eeC39aDEC1d7434C4870218C66894',
+      blockCreated: 4_514_041,
+    },
+  },
+}
+
+const chains = [polygon, polygonMumbai, rbaChain]
 export const projectId = process.env.REACT_APP_WALLETCONNECT_PROJECTID
 
 export const { publicClient } = configureChains(chains, [w3mProvider({ projectId })])
@@ -84,17 +109,25 @@ export const modalTheme = {
 }
 
 export const publicDefaultClient = (chain = 80001) => {
-  let defaultUrl = 'https://rpc.ankr.com/polygon_mumbai'
-  let defaultChain = polygonMumbai;
+  let defaultUrl
+  let defaultChain
 
   if (chain === 137) {
     defaultChain = polygon
     defaultUrl = 'https://rpc-mainnet.maticvigil.com/'
   }
+  else if (chain === 159) {
+    defaultChain = rbaChain
+    defaultUrl = 'https://preseed-testnet-1.roburna.com/'
+  }
+  else {
+    defaultUrl = 'https://rpc.ankr.com/polygon_mumbai'
+    defaultChain = polygonMumbai;
+  }
+
 
 
   return createPublicClient({
-
     chain: defaultChain,
     transport: http(defaultUrl)
   })

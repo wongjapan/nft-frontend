@@ -30,6 +30,10 @@ function App() {
         ethereumClient={ethereumClient}
         themeMode={theme}
         themeVariables={modalTheme}
+        chainImages={[{
+          159: 'https://mintnft.arborswap.org/images/logo-small.svg'
+        }]
+        }
       />
     </>
   )
