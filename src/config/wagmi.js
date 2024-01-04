@@ -6,8 +6,8 @@ import { createPublicClient, http } from 'viem'
 
 const rbaChain = {
   id: 159,
-  name: 'Rbachain',
-  network: 'rbachain',
+  name: 'Rbachain Testnet',
+  network: 'rbachain-testnet',
   nativeCurrency: {
     decimals: 18,
     name: 'Roburna',
@@ -18,13 +18,13 @@ const rbaChain = {
     default: { http: ['https://preseed-testnet-1.roburna.com/'] },
   },
   blockExplorers: {
-    etherscan: { name: 'RBASCAN', url: 'https://rbascan.com' },
-    default: { name: 'RBASCAN', url: 'https://rbascan.com' },
+    etherscan: { name: 'RBASCAN', url: 'https://testnet.rbascan.com' },
+    default: { name: 'RBASCAN', url: 'https://testnet.rbascan.com' },
   },
   contracts: {
     multicall3: {
-      address: '0x147cf52DEd2eeC39aDEC1d7434C4870218C66894',
-      blockCreated: 4_514_041,
+      address: '0x8655e717fA4157e1099F61bA261c2Cd7b121d661',
+      blockCreated: 257_467,
     },
   },
 }
